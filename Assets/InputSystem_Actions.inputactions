@@ -2,6 +2,76 @@
     "name": "InputSystem_Actions",
     "maps": [
         {
+            "name": "Main",
+            "id": "192cab8d-86ac-4e37-9dc2-8675a64c4b4e",
+            "actions": [
+                {
+                    "name": "PointerDelta",
+                    "type": "Value",
+                    "id": "50368ac6-1d93-45b7-9a98-bb2bcffe3aca",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "PointerDown",
+                    "type": "Button",
+                    "id": "22d0705a-2b61-461c-8bae-304b4732cc9d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b3c0c76f-cab3-4bfe-83e5-befa2bdfeea2",
+                    "path": "<Touchscreen>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PointerDelta",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d4b75ceb-3a33-44a2-a382-603c2c6082d6",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PointerDelta",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0b9584ad-1e8b-4e3c-9649-6af5042877fa",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PointerDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fe89ec63-70aa-4219-b6d7-096b411d4e02",
+                    "path": "<Mouse>/press",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PointerDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
             "name": "Player",
             "id": "df70fa95-8a34-4494-b137-73ab6b9c7d37",
             "actions": [
