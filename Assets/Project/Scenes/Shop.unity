@@ -1594,7 +1594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 3
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -1667,6 +1667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d42413ca42e4e41afe3e242c0a19e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 1
 --- !u!4 &446870760
 Transform:
   m_ObjectHideFlags: 0
