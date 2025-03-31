@@ -2,9 +2,11 @@ using UnityEngine;
 using UnityEngine.AI;
 using Zenject;
 
-public class NavigationAgent : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    private NavMeshAgent meshAgent;
+    private NavMeshAgent navMeshAgent;
+    private Animator animator;
+
     private NavigationService navService;
 
     [Inject] 
@@ -14,7 +16,8 @@ public class NavigationAgent : MonoBehaviour
     }
     private void Awake()
     {
-        meshAgent = GetComponent<NavMeshAgent>();
+        navMeshAgent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
     }
 
     private void OnEnable()
@@ -25,9 +28,17 @@ public class NavigationAgent : MonoBehaviour
     {
         navService.DestinationChanged -= MoveTo;
     }
-
+    private void FixedUpdate()
+    {
+        HandleAnimations();
+    }
     private void MoveTo(Vector3 targetPos)
     {
-        meshAgent.SetDestination(targetPos);
+        navMeshAgent.SetDestination(targetPos);
+    }
+    private void HandleAnimations()
+    {
+        bool isMoving = navMeshAgent.velocity.magnitude > 0.5f;
+        animator.SetBool("Walk",isMoving);
     }
 }
