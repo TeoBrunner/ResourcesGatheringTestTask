@@ -56,7 +56,6 @@ public class PlayerController : MonoBehaviour
 
         if(other.TryGetComponent<IInteractable>(out var interactable))
         {
-            print("aboba");
             interactable.Interact();
             animator.SetTrigger("Interact");
             StartCoroutine(CooldownInteract());

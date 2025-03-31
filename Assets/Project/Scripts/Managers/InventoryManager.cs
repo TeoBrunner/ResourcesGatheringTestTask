@@ -21,7 +21,6 @@ public class InventoryManager : MonoBehaviour
         }
 
         inventoryChanged?.Invoke();
-        DebugLogInventory();
     }
 
     private void DebugLogInventory()
